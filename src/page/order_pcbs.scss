@@ -30,4 +30,17 @@
     }
   }
 
+  a.item {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
+
+  div.ui.floating.label {
+    top: 2.5em !important;
+    left: 95% !important;
+  }
+
+  div.ui.label {
+    background-color: transparent !important;
+  }
 }
