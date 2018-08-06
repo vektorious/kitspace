@@ -12,6 +12,8 @@ const pcbwayUrl =
   'https://www.pcbway.com/orderonline.aspx' +
   `?x=${width}&y=${height}&from=kitspace`
 
+const royalCircuitsUrl = 'https://www.royalcircuits.com/'
+
 let OrderPcbs = React.createClass({
   getInitialState() {
     return {downloaded: false}
@@ -46,6 +48,17 @@ let OrderPcbs = React.createClass({
                 }}
               >
                 <img src="/images/pcbway.png" />
+              </semantic.Menu.Item>
+              <semantic.Menu.Item
+                as="a"
+                href={royalCircuitsUrl}
+                onClick={() => {
+                  if (!this.state.downloaded) {
+                    window.open(zipPath)
+                  }
+                }}
+              >
+                <img src="/images/royal_circuits.png" />
               </semantic.Menu.Item>
             </semantic.Menu>
           </div>
