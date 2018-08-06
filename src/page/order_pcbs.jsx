@@ -20,10 +20,10 @@ let OrderPcbs = React.createClass({
   },
   render() {
     return (
-      <ReactResponsive query={mediaQueries.small_width}>
+      <ReactResponsive query={'(max-width: 702px)'}>
         {matches => (
           <div className="OrderPcbs">
-            <semantic.Menu stackable={matches} compact borderless>
+            <semantic.Menu stackable={matches} compact collapsing borderless>
               <semantic.Menu.Item>
                 <h4>Order PCBs:</h4>
               </semantic.Menu.Item>
