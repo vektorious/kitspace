@@ -9,7 +9,7 @@ var BoardList = React.createClass({
     data: React.PropTypes.array,
     searching: React.PropTypes.bool
   },
-  render: function() {
+  render() {
     const intro = this.props.searching ? null : <Intro />
     if (this.props.data.length === 0) {
       return (
@@ -25,7 +25,7 @@ var BoardList = React.createClass({
       return <BoardCard data={data} key={data.id + index} lazyLoad={true} />
     })
     return (
-      <div>
+      <div className="boardListContainer">
         {intro}
         <div className="boardList">{cardNodes}</div>
       </div>

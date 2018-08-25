@@ -1,8 +1,12 @@
 @import 'board_card';
 
-.boardList {
+.boardListContainer {
   text-align: center;
   display: inline-table;
   width: 100%;
+}
+
+.boardList {
+  max-width: 1000px;
   margin-top: 32px;
 }
