@@ -25,9 +25,11 @@ var BoardList = React.createClass({
       return <BoardCard data={data} key={data.id + index} lazyLoad={true} />
     })
     return (
-      <div className="boardListContainer">
+      <div>
         {intro}
-        <div className="boardList">{cardNodes}</div>
+        <div className="boardListContainer">
+          <div className="boardList">{cardNodes}</div>
+        </div>
       </div>
     )
   }

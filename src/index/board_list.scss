@@ -1,12 +1,14 @@
 @import 'board_card';
 
 .boardListContainer {
-  text-align: center;
   display: inline-table;
+  text-align: center;
   width: 100%;
 }
 
 .boardList {
+  text-align: center;
+  display: inline-table;
   max-width: 1000px;
   margin-top: 32px;
 }
