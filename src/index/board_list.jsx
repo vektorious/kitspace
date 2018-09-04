@@ -4,8 +4,6 @@ const React = require('react')
 const BoardCard = require('./board_card')
 const Intro = require('./intro')
 
-const OptIn = require('../opt_in')
-
 var BoardList = React.createClass({
   propTypes: {
     data: React.PropTypes.array,
@@ -32,7 +30,6 @@ var BoardList = React.createClass({
         <div className="boardListContainer">
           <div className="boardList">{cardNodes}</div>
         </div>
-        <OptIn />
       </div>
     )
   }

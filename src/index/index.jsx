@@ -5,6 +5,7 @@ const BoardList = require('./board_list')
 const boards = require('../boards.json')
 
 const SearchInput = ReactSearchInput.default
+const OptIn = require('../opt_in')
 
 var Main = React.createClass({
   getInitialState: function() {
@@ -30,6 +31,7 @@ var Main = React.createClass({
           </div>
         </TitleBar>
         <BoardList data={this.state.result} searching={this.state.searching} />
+        <OptIn />
       </div>
     )
   },
