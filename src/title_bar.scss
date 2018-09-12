@@ -1,128 +1,135 @@
 @import 'colors';
 @import '/semantic.min.css';
 
+.titleText {
+  border-radius: 5px;
+  color: $white;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
 .titleBar {
+  align-items: center;
+  background-color: $mine-shaft;
+  border-bottom-left-radius: 5;
+  border-bottom-right-radius: 5;
+  box-shadow: 0 0.1em 0.5em $black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(small_width) {
+    justify-content: space-around;
+  }
+
+  .logoContainer {
+    min-width: 180px;
+    display: flex;
+    justify-content: center;
+    background-color: $mine-shaft;
+    margin: 10px;
+    z-index: 1;
+    flex-shrink: 2;
+  }
+
+  .logoImg {
+    max-height: 46px;
+  }
+  .submissionButton {
+    align-items: center;
+    background: $fruit-salad;
+    border: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Noto Sans', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 0;
+    margin-right: 8px;
+    min-width: 174px;
+    padding: 20px 15px;
+    white-space: nowrap;
+  }
+
+  .submitContainer {
     align-items: center;
     background-color: $mine-shaft;
-    border-bottom-left-radius: 5;
-    border-bottom-right-radius: 5;
-    box-shadow: 0 .1em .5em $black;
+    color: $white;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+    flex-shrink: 0;
+    justify-content: space-around;
+    padding: 10px;
+    z-index: 1;
+    min-width: 180px;
+
+    @include breakpoint(mobile-m) {
+      width: 100%;
+    }
+
+    .octicon.uploadIcon,
+    .octicon.githubIcon {
+      display: block;
+      font-size: 32px;
+      height: 32px;
+      width: 32px;
+    }
+
+    .contributeButton {
+      align-items: center;
+      border: 0;
+      border-radius: 3px;
+      color: $gray;
+      cursor: pointer;
+      display: flex;
+      font-family: 'Noto Sans', 'Helvetica', 'Arial', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      justify-content: space-around;
+      padding: 5px;
+      white-space: nowrap;
+    }
+
+    .contributeButton:hover {
+      color: $silver-chalice;
+    }
+
+    .uploadContainer:hover {
+      text-decoration: none;
+    }
+  }
+
+  .submitImage {
+    width: 60%;
+  }
+
+  .middleContainer {
+    flex-grow: 2;
 
     @include breakpoint(small_width) {
-        justify-content: space-around;
+      margin: 10px;
+      order: 3;
+      width: 100%;
     }
+  }
 
-    .logoContainer {
-        min-width:180px;
-        display:flex;
-        justify-content:center;
-        background-color: $mine-shaft;
-        margin: 10px;
-        z-index: 1;
-        flex-shrink: 2;
-    }
+  .contributeContainer:hover {
+    color: $white;
+    text-decoration: none;
+  }
 
-    .logoImg {
-        max-height: 46px;
-    }
-    .submissionButton {
-        align-items: center;
-        background: $fruit-salad;
-        border: 0;
-        border-radius: 3px;
-        box-sizing: border-box;
-        color: $white;
-        cursor: pointer;
-        display: flex;
-        font-family: 'Noto Sans','Helvetica', 'Arial', sans-serif;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 0;
-        margin-right: 8px;
-        min-width: 174px;
-        padding: 20px 15px;
-        white-space: nowrap;
-    }
-
-    .submitContainer {
-        align-items: center;
-        background-color: $mine-shaft;
-        color: $white;
-        display: flex;
-        flex-shrink: 0;
-        justify-content: space-around;
-        padding: 10px;
-        z-index: 1;
-        min-width:180px;
-
-        @include breakpoint(mobile-m) {
-            width: 100%;
-        }
-
-
-        .octicon.uploadIcon,
-        .octicon.githubIcon {
-            display: block;
-            font-size: 32px;
-            height: 32px;
-            width: 32px;
-        }
-
-        .contributeButton {
-            align-items: center;
-            border: 0;
-            border-radius: 3px;
-            color: $gray;
-            cursor: pointer;
-            display: flex;
-            font-family: 'Noto Sans','Helvetica', 'Arial', sans-serif;
-            font-size: 16px;
-            font-weight: bold;
-            justify-content: space-around;
-            padding: 5px;
-            white-space: nowrap;
-
-        }
-
-        .contributeButton:hover {
-            color: $silver-chalice;
-        }
-
-        .uploadContainer:hover {
-            text-decoration: none;
-        }
-    }
-
-    .submitImage {
-        width: 60%;
-    }
-
-    .middleContainer {
-        flex-grow: 2;
-
-        @include breakpoint(small_width) {
-            margin: 10px;
-            order: 3;
-            width: 100%;
-        }
-    }
-
-    .contributeContainer:hover {
-        color: $white;
-        text-decoration: none;
-    }
-
-    .contributeContainer {
-        align-items: center;
-        color: $gray;
-        display: flex;
-    }
-
+  .contributeContainer {
+    align-items: center;
+    color: $gray;
+    display: flex;
+  }
 }
