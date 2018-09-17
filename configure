@@ -281,6 +281,10 @@ if (config === 'production') {
     .edge('build/_redirects')
     .from('src/_redirects')
     .using('copy')
+  ninja
+    .edge('build/netlify.toml')
+    .from('src/netlify.toml')
+    .using('copy')
 }
 
 ninja
