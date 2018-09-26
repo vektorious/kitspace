@@ -8,6 +8,12 @@
   dependencies:
     xlsx "^0.12.6"
 
+"1-click-bom@git+https://github.com/kitspace/npm-1-click-bom.git":
+  version "1.3.1"
+  resolved "git+https://github.com/kitspace/npm-1-click-bom.git#d27e40a811dd98755a0acf8711685dfab53eb3d1"
+  dependencies:
+    xlsx "^0.12.6"
+
 "@tracespace/xml-id@^4.0.0-next.13":
   version "4.0.0-next.13"
   resolved "https://registry.yarnpkg.com/@tracespace/xml-id/-/xml-id-4.0.0-next.13.tgz#7ee9b229572400303e19f43841e7507a0d329320"
